@@ -3,10 +3,14 @@
         "id": "trustedlogin-client",
         "label": "Trusted Login Client",
         "includePaths": [
-            "src/"
+            "src/",
+            "languages/trustedlogin-client.pot"
         ],
         "originalNamespace": "TrustedLogin",
+        "mainFile": {
             "templatePath": "main.php",
+            "outputName": "trusted-login.php"
+        },
         "groups": [
             {
                 "id": "vendor",
