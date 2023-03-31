@@ -1,0 +1,259 @@
+{
+    "builder": {
+        "id": "imaginarymachines/pm2-modern-plugin",
+        "label": "Modern WordPress Plugin",
+        "includePaths": [
+            ".github/",
+            "src/",
+            "tests/",
+            ".gitignore",
+            ".wp-env.json",
+            "composer.json",
+            "makeZip.js",
+            "package.json",
+            "phpcs.xml.dist",
+            "phpunit.xml.dist",
+            "pm2-modern-plugin.php",
+            "README.md",
+            "webpack.config.js"
+        ],
+        "originalNamespace": "VendorNamespace\\PluginNamespace",
+        "groups": [
+            {
+                "id": "plugin",
+                "label": "Plugin Info",
+                "order": "1",
+                "description": "The vendor information",
+                "link": "https://docs.trustedlogin.com/Client/configuration",
+                "fields": [
+                    "slug",
+                    "version",
+                    "pluginMeta.PLUGIN_NAME"
+                ]
+            },
+            {
+                "id": "pluginMeta",
+                "label": "Plugin Meta",
+                "order": "3",
+                "description": "For plugin header",
+                "fields": [
+                    "pluginMeta.PLUGIN_NAME",
+                    "pluginMeta.PLUGIN_URI",
+                    "pluginMeta.PLUGIN_AUTHOR_NAME",
+                    "pluginMeta.PLUGIN_AUTHOR_URI",
+                    "pluginMeta.PLUGIN_REQUIRES_PHP",
+                    "pluginMeta.PLUGIN_REQUIRES_WP"
+                ]
+            },
+            {
+                "id": "github",
+                "label": "GitHub",
+                "order": "4",
+                "description": "GitHub repository information",
+                "fields": [
+                    "github.org",
+                    "github.repo"
+                ]
+            },
+            {
+                "id": "php",
+                "label": "PHP",
+                "order": "4",
+                "description": "PHP stuffs",
+                "fields": [
+                    "php.VendorNamespace",
+                    "php.PluginNamespace",
+                    "composer.vendor",
+                    "composer.package",
+                    "constant",
+                    "function",
+                    "action"
+                ]
+            },
+            {
+                "id": "block",
+                "fields": [
+                    "block.title",
+                    "block.description",
+                    "block.name",
+                    "block.category",
+                    "block.icon",
+                    "block.version"
+                ]
+            }
+        ],
+        "fields": [
+            {
+                "id": "slug",
+                "name": "Slug",
+                "label": "Label",
+                "type": "text",
+                "required": true,
+                "rules": "slug"
+            },
+            {
+                "id": "version",
+                "name": "Version",
+                "label": "Version",
+                "type": "text",
+                "required": true
+            },
+            {
+                "id": "pluginMeta.PLUGIN_NAME",
+                "name": "Plugin Name",
+                "label": "Plugin Name",
+                "type": "text",
+                "required": true
+            },
+            {
+                "id": "pluginMeta.PLUGIN_URI",
+                "name": "Plugin URI",
+                "label": "Plugin URI",
+                "type": "url",
+                "required": false,
+                "rules": "url"
+            },
+            {
+                "id": "pluginMeta.PLUGIN_AUTHOR_NAME",
+                "name": "Author Name",
+                "label": "Author Name",
+                "type": "text",
+                "required": false
+            },
+            {
+                "id": "pluginMeta.PLUGIN_AUTHOR_URI",
+                "name": "pluginMeta.pluginMeta.PLUGIN_REQUIRES_PHP",
+                "label": "Minimum PHP Version",
+                "default": "7.4",
+                "type": "text",
+                "required": false
+            },
+            {
+                "id": "github.org",
+                "name": "github.org",
+                "label": "GitHub Organization",
+                "type": "text",
+                "required": true
+            },
+            {
+                "id": "github.repo",
+                "name": "github.org",
+                "label": "GitHub Repository",
+                "type": "text",
+                "required": true
+            },
+            {
+                "id": "php.VendorNamespace",
+                "name": "php.VendorNamespace",
+                "label": "Vendor Namespace",
+                "description": "The vendor namespace for the autoloader",
+                "type": "text",
+                "rules": "camel",
+                "required": true
+            },
+            {
+                "id": "php.PluginNamespace",
+                "name": "php.PluginNamespace",
+                "label": "Plugin Namespace",
+                "description": "The plugin namespace for the autoloader",
+                "type": "text",
+                "rules": "camel",
+                "required": true
+            },
+            {
+                "id": "composer.vendor",
+                "name": "composer.vendor",
+                "label": "Composer Vendor",
+                "description": "The vendor name for composer.json",
+                "type": "text",
+                "rules": "slug",
+                "required": true
+            },
+            {
+                "id": "composer.package",
+                "name": "composer.package",
+                "label": "Composer Package",
+                "description": "The package name for composer.json",
+                "type": "text",
+                "rules": "slug",
+                "required": true
+            },
+            {
+                "id": "constant",
+                "name": "constant",
+                "label": "PHP Constant Prefix",
+                "description": "The prefix for PHP constants",
+                "type": "text",
+                "rules": "uppercase",
+                "required": true
+            },
+            {
+                "id": "function",
+                "name": "function",
+                "label": "PHP Function Prefix",
+                "description": "The prefix for PHP functions",
+                "type": "text",
+                "rules": "lowercase",
+                "required": true
+            },
+            {
+                "id": "action",
+                "name": "action",
+                "label": "WordPress Action Prefix",
+                "description": "The prefix for WordPress actions",
+                "type": "text",
+                "rules": "lowercase",
+                "required": true
+            },
+            {
+                "id": "block.title",
+                "name": "block.title",
+                "label": "Block Title",
+                "description": "The title of the block",
+                "type": "text",
+                "required": true
+            },
+            {
+                "id": "block.description",
+                "name": "block.description",
+                "label": "Block Description",
+                "description": "The description of the block",
+                "type": "text",
+                "required": true
+            },
+            {
+                "id": "block.name",
+                "name": "block.name",
+                "label": "Block Name",
+                "description": "The plugin slug will be prepended",
+                "type": "text",
+                "required": true,
+                "rules": "slug"
+            },
+            {
+                "id": "block.category",
+                "name": "block.category",
+                "label": "Block Category",
+                "description": "The category of the block",
+                "type": "text",
+                "required": true
+            },
+            {
+                "id": "block.icon",
+                "name": "block.icon",
+                "label": "Block Icon",
+                "description": "The icon of the block",
+                "type": "text",
+                "required": true
+            },
+            {
+                "id": "block.version",
+                "name": "block.version",
+                "label": "Block Version",
+                "description": "The version of the block",
+                "type": "text",
+                "required": true
+            }
+        ]
+    }
+}
