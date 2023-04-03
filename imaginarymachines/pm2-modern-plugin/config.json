@@ -23,8 +23,7 @@
                 "id": "plugin",
                 "label": "Plugin Info",
                 "order": "1",
-                "description": "The vendor information",
-                "link": "https://docs.trustedlogin.com/Client/configuration",
+                "description": "Information about the plugin",
                 "fields": [
                     "slug",
                     "version",
@@ -85,29 +84,29 @@
         "fields": [
             {
                 "id": "slug",
-                "name": "Slug",
-                "label": "Label",
+                "name": "slug",
+                "label": "Slug",
                 "type": "text",
                 "required": true,
                 "rules": "slug"
             },
             {
                 "id": "version",
-                "name": "Version",
+                "name": "version",
                 "label": "Version",
                 "type": "text",
                 "required": true
             },
             {
                 "id": "pluginMeta.PLUGIN_NAME",
-                "name": "Plugin Name",
+                "name": "pluginMeta.PLUGIN_NAME",
                 "label": "Plugin Name",
                 "type": "text",
                 "required": true
             },
             {
                 "id": "pluginMeta.PLUGIN_URI",
-                "name": "Plugin URI",
+                "name": "pluginMeta.PLUGIN_URI",
                 "label": "Plugin URI",
                 "type": "url",
                 "required": false,
