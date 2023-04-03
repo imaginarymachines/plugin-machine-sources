@@ -1,0 +1,29 @@
+{
+    "builder": {
+        "id": "imaginarymachines/small",
+        "label": "Small Test",
+        "includePaths": [
+            "README.md",
+            "small.php"
+        ],
+        "groups": [
+            {
+                "id": "one",
+                "label": "One",
+                "fields": [
+                    "slug",
+                ]
+            }
+        ],
+        "fields": {
+            "slug": {
+                "id": "slug",
+                "label": "Slug",
+                "type": "text",
+                "group": "one",
+                "required": true,
+                "rules": "required|alpha_dash"
+            }
+        }
+    }
+}
