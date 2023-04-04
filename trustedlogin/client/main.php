@@ -12,7 +12,7 @@ try {
     // Check class_exists() for sites running PHP 5.2.x
     if ( class_exists( '\PhpNamespace\TrustedLogin\Client') ) {
         new \PhpNamespace\TrustedLogin\Client(
-            new \PhpNamespace\TrustedLogin\Client( $config )
+            new \PhpNamespace\TrustedLogin\Config( $config )
         );
     }
 } catch ( \Exception $exception ) {
