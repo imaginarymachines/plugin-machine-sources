@@ -1,23 +1,4 @@
 <?php
-/**
- * Configuration for TrustedLogin Client
- *
- *
- * @see https://docs.trustedlogin.com/Client/configuration
- */
-
-$config = [];
-
-try {
-    // Check class_exists() for sites running PHP 5.2.x
-    if ( class_exists( '\PhpNamespace\TrustedLogin\Client') ) {
-        new \PhpNamespace\TrustedLogin\Client(
-            new \PhpNamespace\TrustedLogin\Config( $config )
-        );
-    }
-} catch ( \Exception $exception ) {
-    error_log( $exception->getMessage() );
-}
 
 /**
  * Autoloader for the TrustedLogin Client
@@ -39,3 +20,21 @@ spl_autoload_register(function ($class) {
         require $file;
     }
 });
+
+/**
+ * Configuration for TrustedLogin Client
+ *
+ *
+ * @see https://docs.trustedlogin.com/Client/configuration
+ */
+
+
+$config = [];
+
+try {
+    new \PhpNamespace\TrustedLogin\Client(
+        new \PhpNamespace\TrustedLogin\Config($config)
+    );
+} catch (\Exception $exception) {
+    error_log($exception->getMessage());
+}
